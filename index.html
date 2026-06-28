@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pahrin — Women's Printed Short Kurtis & Tunic Tops</title>
+  <meta name="description" content="Pahrin — Stylish polycotton short kurtis with V-notch lace neckline, 3/4 sleeves. Starting ₹349. Order via WhatsApp. Also on Amazon India."/>
+  <meta name="theme-color" content="#5A7A66"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+/* ═══════════════════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════════════════ */
+:root {
+  --ivory:     #F8F5F0;
+  --ivory-d:   #EFE9E1;
+  --sand:      #E8DED2;
+  --char:      #1C1C1E;
+  --char2:     #3A3A3C;
+  --muted:     #8A8A8E;
+  --sage:      #7B9E87;
+  --sage-d:    #5A7A66;
+  --sage-l:    #D4E4DA;
+  --white:     #FFFFFF;
+  --red:       #C0392B;
+  --disc-bg:   #FFF3E0;
+  --disc-text: #E65100;
+  --fd: 'Playfair Display', Georgia, serif;
+  --fu: 'Inter', system-ui, sans-serif;
+  --r1: 4px; --r2: 10px; --r3: 16px; --r4: 24px;
+  --sh: 0 2px 12px rgba(28,28,30,.07);
+  --sh2: 0 8px 32px rgba(28,28,30,.13);
+  --tr: .2s cubic-bezier(.4,0,.2,1);
+}
+
+/* ═══════════════════════════════════════════════
+   RESET
+═══════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--fu);background:var(--ivory);color:var(--char);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;object-fit:cover}
+button{cursor:pointer;border:none;background:none;font-family:inherit;line-height:1}
+a{color:inherit;text-decoration:none}
+input,textarea,select{font-family:inherit}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
+
+/* ═══════════════════════════════════════════════
+   LAYOUT UTILS
+═══════════════════════════════════════════════ */
+.wrap{width:100%;max-width:1260px;margin:0 auto;padding:0 18px}
+
+/* ═══════════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════════ */
+.nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(248,245,240,.95);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--sand);
+}
+.nav__inner{display:flex;align-items:center;gap:12px;height:62px}
+.nav__logo{
+  font-family:var(--fd);font-size:1.5rem;font-weight:500;
+  letter-spacing:.04em;white-space:nowrap;flex-shrink:0;
+}
+.nav__logo span{color:var(--sage-d)}
+
+.nav__search{flex:1;max-width:340px;position:relative}
+.nav__search input{
+  width:100%;height:38px;
+  background:var(--ivory-d);border:1.5px solid transparent;
+  border-radius:19px;padding:0 14px 0 38px;
+  font-size:.84rem;outline:none;transition:var(--tr);
+  color:var(--char);
+}
+.nav__search input::placeholder{color:var(--muted)}
+.nav__search input:focus{border-color:var(--sage);background:var(--white)}
+.nav__search-ico{
+  position:absolute;left:12px;top:50%;transform:translateY(-50%);
+  width:15px;height:15px;color:var(--muted);pointer-events:none;
+}
+
+.nav__actions{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
+
+.nav__amz{
+  display:flex;align-items:center;gap:5px;
+  height:36px;padding:0 13px;
+  background:var(--sand);border-radius:18px;
+  font-size:.72rem;font-weight:500;color:var(--char2);
+  transition:var(--tr);white-space:nowrap;
+}
+.nav__amz:hover{background:var(--ivory-d)}
+
+.nav__cart{
+  display:flex;align-items:center;gap:7px;
+  height:38px;padding:0 16px;
+  background:var(--char);color:var(--white);
+  border-radius:19px;font-size:.8rem;font-weight:500;
+  transition:var(--tr);
+}
+.nav__cart:hover{background:var(--char2)}
+.nav__cart-n{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:19px;height:19px;
+  background:var(--sage);color:var(--white);
+  border-radius:50%;font-size:.65rem;font-weight:700;
+  display:none;
+}
+.nav__cart-n.show{display:inline-flex}
+
+/* ═══════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════ */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(148deg, var(--ivory) 48%, var(--sage-l) 100%);
+  padding:60px 0 52px;
+}
+.hero__thread{
+  position:absolute;top:0;right:0;
+  width:min(480px,55vw);height:100%;
+  pointer-events:none;opacity:.28;
+}
+.hero__inner{
+  position:relative;z-index:1;
+  text-align:center;max-width:620px;
+  margin:0 auto;padding:0 4px;
+}
+.hero__eyebrow{
+  display:inline-block;
+  font-size:.67rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--sage-d);margin-bottom:18px;
+}
+.hero h1{
+  font-family:var(--fd);
+  font-size:clamp(2.1rem,5.5vw,3.6rem);
+  font-weight:400;line-height:1.17;
+  color:var(--char);margin-bottom:18px;
+}
+.hero h1 em{font-style:italic;color:var(--sage-d)}
+.hero__sub{
+  font-size:.95rem;color:var(--char2);
+  max-width:460px;margin:0 auto 30px;
+  font-weight:300;line-height:1.78;
+}
+.hero__cta-row{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+.hero__cta{
+  display:inline-flex;align-items:center;gap:8px;
+  height:50px;padding:0 30px;
+  background:var(--sage-d);color:var(--white);
+  border-radius:25px;font-size:.88rem;font-weight:500;
+  transition:var(--tr);
+}
+.hero__cta:hover{background:var(--char);transform:translateY(-1px)}
+.hero__pill{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--white);border:1.5px solid var(--sage-l);
+  padding:8px 16px;border-radius:20px;
+  font-size:.78rem;color:var(--char2);
+}
+.hero__pill strong{color:var(--sage-d);font-size:.88rem}
+
+/* ═══════════════════════════════════════════════
+   TRUST STRIP
+═══════════════════════════════════════════════ */
+.trust{
+  background:var(--char);color:var(--white);
+  padding:14px 0;
+}
+.trust__inner{
+  display:flex;align-items:center;justify-content:center;
+  gap:32px;flex-wrap:wrap;
+}
+.trust__item{
+  display:flex;align-items:center;gap:7px;
+  font-size:.75rem;font-weight:500;opacity:.9;
+  white-space:nowrap;
+}
+.trust__item svg{opacity:.7}
+
+/* ═══════════════════════════════════════════════
+   FILTERS
+═══════════════════════════════════════════════ */
+.filters{
+  padding:22px 0 0;
+  border-bottom:1px solid var(--sand);
+  background:var(--white);
+  position:sticky;top:62px;z-index:100;
+}
+.filters__row{
+  display:flex;align-items:center;gap:9px;
+  overflow-x:auto;scrollbar-width:none;
+  padding-bottom:22px;
+}
+.filters__row::-webkit-scrollbar{display:none}
+.pill{
+  flex-shrink:0;height:34px;padding:0 16px;
+  border:1.5px solid var(--sand);border-radius:17px;
+  font-size:.79rem;font-weight:500;color:var(--char2);
+  background:var(--white);transition:var(--tr);white-space:nowrap;
+}
+.pill:hover{border-color:var(--sage);color:var(--sage-d)}
+.pill.active{background:var(--sage-d);border-color:var(--sage-d);color:var(--white)}
+
+.sort-sel{
+  margin-left:auto;flex-shrink:0;
+  height:34px;padding:0 30px 0 13px;
+  border:1.5px solid var(--sand);border-radius:17px;
+  font-size:.79rem;font-weight:500;color:var(--char2);
+  background:var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='%238A8A8E' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 11px center;
+  appearance:none;cursor:pointer;outline:none;
+}
+.sort-sel:focus{border-color:var(--sage)}
+
+/* ═══════════════════════════════════════════════
+   CATALOG
+═══════════════════════════════════════════════ */
+.catalog{padding:40px 0 80px}
+.catalog__hd{
+  display:flex;align-items:baseline;justify-content:space-between;
+  margin-bottom:26px;
+}
+.catalog__hd h2{font-family:var(--fd);font-size:1.45rem;font-weight:400}
+.catalog__ct{font-size:.78rem;color:var(--muted)}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+@media(min-width:560px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:900px){.grid{grid-template-columns:repeat(4,1fr);gap:18px}}
+@media(min-width:1200px){.grid{grid-template-columns:repeat(4,1fr);gap:22px}}
+
+/* ═══════════════════════════════════════════════
+   PRODUCT CARD
+═══════════════════════════════════════════════ */
+.card{
+  background:var(--white);border-radius:var(--r3);
+  overflow:hidden;box-shadow:var(--sh);
+  cursor:pointer;transition:var(--tr);
+  display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+
+.card__img-wrap{
+  position:relative;
+  aspect-ratio:3/4;overflow:hidden;
+  background:var(--sand);
+}
+.card__img-wrap img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .5s ease;
+}
+.card:hover .card__img-wrap img{transform:scale(1.05)}
+
+/* Discount badge */
+.card__disc{
+  position:absolute;top:10px;left:10px;
+  background:var(--disc-bg);color:var(--disc-text);
+  font-size:.62rem;font-weight:700;letter-spacing:.05em;
+  padding:3px 8px;border-radius:6px;
+}
+
+/* Image nav dots */
+.card__dots{
+  position:absolute;bottom:10px;left:50%;
+  transform:translateX(-50%);
+  display:flex;gap:5px;
+  opacity:0;transition:opacity .2s;
+}
+.card:hover .card__dots{opacity:1}
+.card__dot{
+  width:6px;height:6px;border-radius:50%;
+  background:rgba(255,255,255,.6);
+  border:none;padding:0;cursor:pointer;transition:var(--tr);
+  flex-shrink:0;
+}
+.card__dot.active{background:var(--white);transform:scale(1.2)}
+
+/* Quick add */
+.card__qa{
+  position:absolute;bottom:12px;left:50%;
+  transform:translateX(-50%) translateY(6px);
+  opacity:0;white-space:nowrap;
+  height:32px;padding:0 15px;
+  background:rgba(28,28,30,.88);
+  color:var(--white);border-radius:16px;
+  font-size:.72rem;font-weight:500;
+  backdrop-filter:blur(4px);
+  transition:var(--tr);
+}
+.card:hover .card__qa{opacity:1;transform:translateX(-50%) translateY(0)}
+
+.card__body{padding:12px 14px 16px;flex:1;display:flex;flex-direction:column;gap:4px}
+.card__color{
+  font-size:.65rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--sage-d);
+}
+.card__title{
+  font-family:var(--fd);font-size:.86rem;font-weight:500;
+  line-height:1.36;color:var(--char);
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  flex:1;
+}
+.card__price-row{display:flex;align-items:baseline;gap:8px;margin-top:2px}
+.card__price{font-size:1rem;font-weight:700;color:var(--char)}
+.card__mrp{font-size:.75rem;color:var(--muted);text-decoration:line-through}
+.card__save{font-size:.68rem;font-weight:600;color:var(--disc-text)}
+
+/* No results */
+.no-res{
+  grid-column:1/-1;text-align:center;
+  padding:70px 20px;
+}
+.no-res h3{font-family:var(--fd);font-size:1.3rem;margin-bottom:8px}
+.no-res p{color:var(--muted);font-size:.88rem}
+
+/* ═══════════════════════════════════════════════
+   PRODUCT DETAIL MODAL
+═══════════════════════════════════════════════ */
+.pm-overlay{
+  display:none;position:fixed;inset:0;z-index:400;
+  background:rgba(28,28,30,.58);backdrop-filter:blur(5px);
+  -webkit-backdrop-filter:blur(5px);
+  padding:0;
+}
+.pm-overlay.open{display:flex;align-items:flex-end}
+@media(min-width:700px){.pm-overlay.open{align-items:center;justify-content:center;padding:20px}}
+
+.pm-modal{
+  background:var(--white);
+  border-radius:var(--r4) var(--r4) 0 0;
+  width:100%;max-height:94vh;
+  overflow:hidden;
+  display:flex;flex-direction:column;
+  animation:slideUp .3s ease;
+  position:relative;
+}
+@media(min-width:700px){
+  .pm-modal{
+    border-radius:var(--r4);
+    max-width:880px;max-height:90vh;
+    flex-direction:row;
+  }
+}
+@keyframes slideUp{from{transform:translateY(32px);opacity:0}to{transform:translateY(0);opacity:1}}
+
+/* Image panel */
+.pm-img-panel{
+  flex-shrink:0;
+  background:var(--sand);
+  display:flex;flex-direction:column;
+}
+@media(max-width:699px){
+  .pm-img-panel{max-height:46vh}
+}
+@media(min-width:700px){
+  .pm-img-panel{width:46%;min-height:480px}
+}
+
+.pm-main-img{
+  flex:1;overflow:hidden;
+  position:relative;
+}
+.pm-main-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:opacity .22s ease;
+}
+
+.pm-thumbs{
+  display:flex;gap:6px;padding:8px 10px;
+  overflow-x:auto;scrollbar-width:thin;
+  background:rgba(255,255,255,.6);backdrop-filter:blur(4px);
+}
+.pm-thumbs::-webkit-scrollbar{height:3px}
+.pm-thumbs::-webkit-scrollbar-thumb{background:var(--sand)}
+.pm-thumb{
+  width:52px;height:52px;flex-shrink:0;
+  border-radius:var(--r1);overflow:hidden;
+  border:2px solid transparent;
+  cursor:pointer;transition:var(--tr);
+  opacity:.65;
+}
+.pm-thumb img{width:100%;height:100%;object-fit:cover}
+.pm-thumb.active{border-color:var(--sage-d);opacity:1}
+.pm-thumb:hover{opacity:.9}
+
+/* Info panel */
+.pm-info{
+  flex:1;overflow-y:auto;padding:22px 22px 28px;
+  display:flex;flex-direction:column;gap:0;
+}
+.pm-close{
+  position:absolute;top:14px;right:14px;
+  width:34px;height:34px;
+  background:rgba(255,255,255,.9);backdrop-filter:blur(4px);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  z-index:10;transition:var(--tr);
+}
+.pm-close:hover{background:var(--sand)}
+
+.pm-badge-row{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.pm-color-dot{
+  width:14px;height:14px;border-radius:50%;
+  border:1.5px solid var(--sand);flex-shrink:0;
+}
+.pm-style-tag{
+  font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--sage-d);
+}
+.pm-disc-tag{
+  margin-left:auto;
+  background:var(--disc-bg);color:var(--disc-text);
+  font-size:.65rem;font-weight:700;padding:3px 8px;border-radius:6px;
+}
+
+.pm-title{
+  font-family:var(--fd);font-size:1.15rem;font-weight:500;
+  line-height:1.32;color:var(--char);
+  margin-bottom:10px;
+}
+.pm-price-row{display:flex;align-items:baseline;gap:10px;margin-bottom:4px}
+.pm-price{font-size:1.4rem;font-weight:700;color:var(--char)}
+.pm-mrp{font-size:.82rem;color:var(--muted);text-decoration:line-through}
+.pm-savings{font-size:.78rem;color:var(--disc-text);font-weight:600}
+.pm-tax{font-size:.7rem;color:var(--muted);margin-bottom:16px}
+
+.pm-specs{
+  display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;
+  background:var(--ivory-d);border-radius:var(--r2);
+  padding:12px 14px;margin-bottom:18px;
+}
+.pm-spec span{font-size:.7rem;color:var(--muted);display:block;margin-bottom:1px}
+.pm-spec strong{font-size:.8rem;color:var(--char2);font-weight:500}
+
+.sz-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.sz-lbl{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--char2)}
+.sz-guide-btn{
+  font-size:.7rem;color:var(--sage-d);
+  text-decoration:underline;cursor:pointer;background:none;border:none;
+  font-family:var(--fu);
+}
+.sz-opts{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}
+.sz-btn{
+  width:44px;height:44px;
+  border:1.5px solid var(--sand);border-radius:var(--r1);
+  font-size:.79rem;font-weight:500;color:var(--char);
+  background:var(--white);transition:var(--tr);
+}
+.sz-btn:hover{border-color:var(--sage);color:var(--sage-d)}
+.sz-btn.sel{border-color:var(--sage-d);background:var(--sage-d);color:var(--white)}
+.sz-btn:focus-visible{outline-offset:2px}
+
+.pm-add{
+  width:100%;height:52px;
+  background:var(--sage-d);color:var(--white);
+  border-radius:var(--r2);font-size:.9rem;font-weight:500;
+  transition:var(--tr);margin-bottom:10px;
+}
+.pm-add:hover{background:var(--char)}
+.pm-add:disabled{background:var(--sand);color:var(--muted);cursor:not-allowed}
+
+.pm-amz{
+  width:100%;height:44px;
+  border:1.5px solid var(--sand);border-radius:var(--r2);
+  font-size:.82rem;font-weight:500;color:var(--char2);
+  display:flex;align-items:center;justify-content:center;gap:7px;
+  transition:var(--tr);background:var(--white);
+}
+.pm-amz:hover{border-color:var(--sage);color:var(--sage-d)}
+
+/* ═══════════════════════════════════════════════
+   SIZE GUIDE MODAL
+═══════════════════════════════════════════════ */
+.sg-overlay{
+  display:none;position:fixed;inset:0;z-index:500;
+  background:rgba(28,28,30,.65);backdrop-filter:blur(5px);
+  align-items:center;justify-content:center;padding:20px;
+}
+.sg-overlay.open{display:flex}
+.sg-modal{
+  background:var(--white);border-radius:var(--r4);
+  max-width:580px;width:100%;max-height:88vh;
+  overflow-y:auto;animation:popIn .25s ease;
+}
+@keyframes popIn{from{transform:scale(.95);opacity:0}to{transform:scale(1);opacity:1}}
+.sg-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 22px 0;margin-bottom:16px;
+}
+.sg-head h3{font-family:var(--fd);font-size:1.2rem;font-weight:500}
+.sg-close{
+  width:32px;height:32px;background:var(--ivory-d);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;transition:var(--tr);
+}
+.sg-close:hover{background:var(--sand)}
+.sg-table-wrap{padding:0 22px 22px;overflow-x:auto}
+.sg-table{width:100%;border-collapse:collapse;font-size:.82rem}
+.sg-table th{
+  background:var(--char);color:var(--white);
+  padding:10px 12px;text-align:center;
+  font-size:.72rem;font-weight:600;letter-spacing:.05em;
+}
+.sg-table th:first-child{border-radius:var(--r1) 0 0 0}
+.sg-table th:last-child{border-radius:0 var(--r1) 0 0}
+.sg-table td{
+  padding:10px 12px;text-align:center;
+  border-bottom:1px solid var(--ivory-d);
+  color:var(--char2);
+}
+.sg-table tr:hover td{background:var(--ivory)}
+.sg-table td:first-child{font-weight:700;color:var(--sage-d)}
+.sg-note{padding:0 22px 20px;font-size:.75rem;color:var(--muted);line-height:1.6}
+
+/* ═══════════════════════════════════════════════
+   CART DRAWER
+═══════════════════════════════════════════════ */
+.cart-ov{
+  display:none;position:fixed;inset:0;z-index:300;
+  background:rgba(28,28,30,.42);
+}
+.cart-ov.open{display:block}
+.cart-dr{
+  position:fixed;top:0;right:-100%;width:min(420px,100%);height:100%;
+  background:var(--white);z-index:301;
+  display:flex;flex-direction:column;
+  box-shadow:-6px 0 36px rgba(28,28,30,.15);
+  transition:right .3s cubic-bezier(.4,0,.2,1);
+}
+.cart-dr.open{right:0}
+.dr-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 20px 18px;border-bottom:1px solid var(--sand);
+}
+.dr-head h2{font-family:var(--fd);font-size:1.15rem;font-weight:500}
+.dr-close{
+  width:34px;height:34px;background:var(--ivory-d);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  transition:var(--tr);
+}
+.dr-close:hover{background:var(--sand)}
+.dr-items{flex:1;overflow-y:auto;padding:14px 20px}
+.cart-empty{
+  display:flex;flex-direction:column;align-items:center;
+  justify-content:center;height:100%;text-align:center;
+  gap:12px;color:var(--muted);
+}
+.cart-empty p{font-size:.88rem}
+.c-item{
+  display:flex;gap:13px;
+  padding:14px 0;border-bottom:1px solid var(--ivory-d);
+}
+.c-img{
+  width:74px;height:94px;flex-shrink:0;
+  border-radius:var(--r2);overflow:hidden;background:var(--sand);
+}
+.c-img img{width:100%;height:100%;object-fit:cover}
+.c-info{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.c-title{font-size:.8rem;font-weight:500;line-height:1.35;color:var(--char)}
+.c-meta{font-size:.7rem;color:var(--muted)}
+.c-ctrls{display:flex;align-items:center;gap:9px;margin-top:auto}
+.q-btn{
+  width:28px;height:28px;
+  border:1.5px solid var(--sand);border-radius:50%;
+  font-size:.95rem;color:var(--char);
+  display:flex;align-items:center;justify-content:center;
+  transition:var(--tr);
+}
+.q-btn:hover{border-color:var(--sage);color:var(--sage-d)}
+.q-num{font-size:.88rem;font-weight:600;min-width:20px;text-align:center}
+.c-rm{
+  margin-left:auto;font-size:.7rem;color:var(--muted);
+  cursor:pointer;background:none;border:none;padding:2px;
+  transition:var(--tr);font-family:var(--fu);
+}
+.c-rm:hover{color:var(--red)}
+.c-price{font-size:.9rem;font-weight:700;white-space:nowrap;padding-top:2px;color:var(--char)}
+.dr-foot{padding:16px 20px 28px;border-top:1px solid var(--sand)}
+.sub-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.sub-lbl{font-size:.8rem;color:var(--muted)}
+.sub-amt{font-size:1.05rem;font-weight:700}
+.sub-note{font-size:.68rem;color:var(--muted);margin-bottom:14px;line-height:1.5}
+.co-btn{
+  width:100%;height:52px;
+  background:var(--sage-d);color:var(--white);
+  border-radius:var(--r2);font-size:.9rem;font-weight:500;
+  transition:var(--tr);
+}
+.co-btn:hover{background:var(--char)}
+.co-btn:disabled{background:var(--sand);color:var(--muted);cursor:not-allowed}
+
+/* ═══════════════════════════════════════════════
+   CHECKOUT MODAL
+═══════════════════════════════════════════════ */
+.co-ov{
+  display:none;position:fixed;inset:0;z-index:600;
+  background:rgba(28,28,30,.65);backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  align-items:center;justify-content:center;padding:16px;
+}
+.co-ov.open{display:flex}
+.co-modal{
+  background:var(--white);border-radius:var(--r4);
+  width:100%;max-width:460px;max-height:92vh;
+  overflow-y:auto;animation:popIn .26s ease;
+}
+.co-head{padding:26px 26px 0}
+.co-head h2{font-family:var(--fd);font-size:1.3rem;font-weight:500;margin-bottom:4px}
+.co-head p{font-size:.79rem;color:var(--muted);margin-bottom:22px}
+.co-body{padding:0 26px 28px}
+.o-sum{
+  background:var(--ivory-d);border-radius:var(--r2);
+  padding:13px 15px;margin-bottom:20px;
+}
+.o-sum h4{
+  font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--char2);margin-bottom:9px;
+}
+.o-row{
+  display:flex;justify-content:space-between;
+  font-size:.79rem;color:var(--char2);margin-bottom:4px;
+}
+.o-total{
+  display:flex;justify-content:space-between;
+  font-size:.88rem;font-weight:700;
+  margin-top:9px;padding-top:9px;
+  border-top:1px solid var(--sand);
+}
+.fg{margin-bottom:15px}
+.fg label{
+  display:block;font-size:.69rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  color:var(--char2);margin-bottom:6px;
+}
+.fg input,.fg textarea{
+  width:100%;padding:11px 14px;
+  border:1.5px solid var(--sand);border-radius:var(--r2);
+  font-size:.88rem;color:var(--char);
+  background:var(--white);outline:none;transition:var(--tr);
+  resize:vertical;
+}
+.fg input:focus,.fg textarea:focus{border-color:var(--sage)}
+.fg input.err,.fg textarea.err{border-color:var(--red)}
+.err-msg{font-size:.69rem;color:var(--red);margin-top:3px;display:none}
+.err-msg.show{display:block}
+.place-btn{
+  width:100%;height:52px;
+  background:var(--sage-d);color:var(--white);
+  border-radius:var(--r2);font-size:.9rem;font-weight:500;
+  transition:var(--tr);margin-top:6px;
+}
+.place-btn:hover{background:var(--char)}
+.co-cancel{
+  width:100%;height:40px;background:none;
+  color:var(--muted);font-size:.82rem;margin-top:6px;
+  transition:var(--tr);
+}
+.co-cancel:hover{color:var(--char)}
+
+/* ═══════════════════════════════════════════════
+   SUCCESS STATE
+═══════════════════════════════════════════════ */
+.suc{
+  padding:40px 28px 36px;text-align:center;
+}
+.suc-icon{
+  width:68px;height:68px;background:var(--sage-l);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;
+}
+.suc h2{font-family:var(--fd);font-size:1.5rem;font-weight:500;margin-bottom:10px}
+.suc p{font-size:.86rem;color:var(--char2);line-height:1.7;margin-bottom:18px}
+.pay-box{
+  background:var(--ivory-d);border:1.5px solid var(--sage-l);
+  border-radius:var(--r3);padding:15px 18px;
+  margin-bottom:22px;text-align:left;
+}
+.pay-box-ico{font-size:1.2rem;margin-bottom:5px}
+.pay-box p{font-size:.79rem;color:var(--char2);line-height:1.65}
+.suc-acts{display:flex;flex-direction:column;gap:9px}
+.wa-btn{
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  height:50px;background:#25D366;color:var(--white);
+  border-radius:var(--r2);font-size:.88rem;font-weight:500;
+  transition:var(--tr);
+}
+.wa-btn:hover{background:#1eba57}
+.cont-btn{
+  height:40px;background:none;color:var(--muted);
+  font-size:.82rem;transition:var(--tr);
+}
+.cont-btn:hover{color:var(--char)}
+
+/* ═══════════════════════════════════════════════
+   AMAZON SECTION
+═══════════════════════════════════════════════ */
+.amz-sec{background:var(--char);color:var(--white);padding:44px 0}
+.amz-inner{
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;gap:18px;
+}
+@media(min-width:640px){
+  .amz-inner{flex-direction:row;text-align:left;justify-content:space-between}
+}
+.amz-inner h3{font-family:var(--fd);font-size:1.3rem;font-weight:400;margin-bottom:5px}
+.amz-inner p{font-size:.8rem;color:rgba(255,255,255,.6)}
+.amz-btn{
+  flex-shrink:0;display:inline-flex;align-items:center;gap:8px;
+  height:46px;padding:0 26px;
+  background:#FF9900;color:var(--char);
+  border-radius:23px;font-size:.82rem;font-weight:700;
+  transition:var(--tr);white-space:nowrap;
+}
+.amz-btn:hover{background:#e88a00;transform:translateY(-1px)}
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════ */
+footer{background:var(--ivory-d);border-top:1px solid var(--sand);padding:44px 0 28px}
+.ft-grid{display:grid;grid-template-columns:1fr;gap:32px}
+@media(min-width:600px){.ft-grid{grid-template-columns:2fr 1fr 1fr}}
+.ft-logo{font-family:var(--fd);font-size:1.3rem;font-weight:500;margin-bottom:9px}
+.ft-logo span{color:var(--sage-d)}
+.ft-tag{font-size:.78rem;color:var(--muted);line-height:1.65;max-width:230px;margin-bottom:14px}
+.ft-coltitle{font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--char2);margin-bottom:11px}
+.ft-links li{margin-bottom:7px}
+.ft-links a{font-size:.79rem;color:var(--muted);transition:var(--tr)}
+.ft-links a:hover{color:var(--sage-d)}
+.ft-bot{
+  margin-top:34px;padding-top:18px;border-top:1px solid var(--sand);
+  display:flex;flex-direction:column;gap:5px;
+  align-items:center;text-align:center;
+}
+@media(min-width:600px){.ft-bot{flex-direction:row;justify-content:space-between;text-align:left}}
+.ft-bot p{font-size:.67rem;color:var(--muted);line-height:1.6}
+
+/* ═══════════════════════════════════════════════
+   TOAST
+═══════════════════════════════════════════════ */
+.toast{
+  position:fixed;bottom:22px;left:50%;
+  transform:translateX(-50%) translateY(120px);
+  background:var(--char);color:var(--white);
+  padding:11px 22px;border-radius:22px;
+  font-size:.82rem;font-weight:500;z-index:9999;
+  transition:transform .28s ease;white-space:nowrap;
+  box-shadow:0 4px 16px rgba(0,0,0,.2);
+}
+.toast.show{transform:translateX(-50%) translateY(0)}
+
+/* ═══════════════════════════════════════════════
+   SCROLL-TOP
+═══════════════════════════════════════════════ */
+.sc-top{
+  position:fixed;bottom:24px;right:18px;
+  width:42px;height:42px;
+  background:var(--char);color:var(--white);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  z-index:150;opacity:0;pointer-events:none;
+  transition:var(--tr);box-shadow:0 4px 14px rgba(28,28,30,.2);
+}
+.sc-top.vis{opacity:1;pointer-events:auto}
+.sc-top:hover{background:var(--sage-d);transform:translateY(-2px)}
+
+/* ═══════════════════════════════════════════════
+   ACCESSIBILITY & REDUCED-MOTION
+═══════════════════════════════════════════════ */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    transition-duration:.01ms!important;
+  }
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav" aria-label="Main navigation">
+  <div class="wrap">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="Pahrin home">Pah<span>rin</span></a>
+
+      <div class="nav__search" role="search">
+        <svg class="nav__search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="search" id="searchInput" placeholder="Search by color, style, print…" aria-label="Search products" autocomplete="off"/>
+      </div>
+
+      <div class="nav__actions">
+        <a href="https://www.amazon.in/stores/Pahrin/page/79437D54-6E9D-4062-A5AB-689ABDF9D15D?lp_asin=B0GMK29MQ1&ref_=ast_bln" target="_blank" rel="noopener" class="nav__amz" aria-label="Shop Pahrin on Amazon India">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+          Amazon
+        </a>
+        <button class="nav__cart" id="cartBtn" aria-label="Open shopping cart">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          Cart
+          <span class="nav__cart-n" id="cartN" aria-live="polite">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" aria-label="Hero">
+  <svg class="hero__thread" viewBox="0 0 480 380" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMaxYMid slice">
+    <path d="M480 0C370 75 240 58 120 195S0 315-40 380" stroke="#7B9E87" stroke-width="1.8" fill="none"/>
+    <path d="M480 45C390 108 270 100 165 222S52 325 18 380" stroke="#7B9E87" stroke-width="1" fill="none" opacity=".55"/>
+    <path d="M480 90C410 140 300 140 210 250S90 335 60 380" stroke="#7B9E87" stroke-width=".5" fill="none" opacity=".35"/>
+    <circle cx="445" cy="22" r="3" fill="#7B9E87" opacity=".5"/>
+    <circle cx="360" cy="72" r="2.2" fill="#7B9E87" opacity=".4"/>
+    <circle cx="275" cy="148" r="2.5" fill="#7B9E87" opacity=".35"/>
+    <circle cx="195" cy="228" r="2" fill="#7B9E87" opacity=".28"/>
+  </svg>
+
+  <div class="wrap">
+    <div class="hero__inner">
+      <span class="hero__eyebrow">New Collection · Starting ₹349</span>
+      <h1>Crafted for <em>every day</em>,<br/>designed to impress</h1>
+      <p class="hero__sub">Premium polycotton short kurtis — breathable, printed, and styled with a V-notch lace neckline and 3/4 sleeves. For the modern Indian woman.</p>
+      <div class="hero__cta-row">
+        <a href="#catalog" class="hero__cta">
+          Shop the Collection
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <span class="hero__pill">All styles at <strong>₹349–₹399</strong></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRUST STRIP ═══ -->
+<div class="trust" aria-label="Trust signals">
+  <div class="wrap">
+    <div class="trust__inner">
+      <div class="trust__item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Genuine Pahrin Brand
+      </div>
+      <div class="trust__item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        Fast Delivery · PAN India
+      </div>
+      <div class="trust__item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.9 2 2 0 0 1 3.59 2.72h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17z"/></svg>
+        Order on WhatsApp
+      </div>
+      <div class="trust__item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        No Payment Upfront
+      </div>
+      <div class="trust__item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Also on Amazon India ↗
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FILTERS ═══ -->
+<div class="filters" role="navigation" aria-label="Filter and sort">
+  <div class="wrap">
+    <div class="filters__row">
+      <button class="pill active" data-f="all">All Kurtis</button>
+      <button class="pill" data-f="asymmetric">Asymmetric Cut</button>
+      <button class="pill" data-f="straight">Straight Fit</button>
+      <button class="pill" data-f="349">₹349 Range</button>
+      <button class="pill" data-f="399">₹399 Range</button>
+      <select class="sort-sel" id="sortSel" aria-label="Sort products">
+        <option value="default">Sort: Featured</option>
+        <option value="price-asc">Price: Low → High</option>
+        <option value="price-desc">Price: High → Low</option>
+        <option value="az">Name: A → Z</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CATALOG ═══ -->
+<section class="catalog" id="catalog" aria-label="Product catalog">
+  <div class="wrap">
+    <div class="catalog__hd">
+      <h2>Our Collection</h2>
+      <span class="catalog__ct" id="catCt" aria-live="polite">12 kurtis</span>
+    </div>
+    <div class="grid" id="grid" role="list"></div>
+  </div>
+</section>
+
+<!-- ═══ AMAZON SECTION ═══ -->
+<section class="amz-sec" aria-label="Also on Amazon">
+  <div class="wrap">
+    <div class="amz-inner">
+      <div>
+        <h3>Also available on Amazon India</h3>
+        <p>Prime delivery · Easy returns · Trusted checkout · UPI &amp; card accepted</p>
+      </div>
+      <a href="https://www.amazon.in/Pahrin-Printed-Multicolor-Geometric-Pattern/dp/B0GDS1M5XQ?ref_=ast_sto_dp&th=1&psc=1" target="_blank" rel="noopener" class="amz-btn">
+        Shop on Amazon ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <div class="ft-logo">Pah<span>rin</span></div>
+        <p class="ft-tag">Modern short kurtis and printed tunic tops for the contemporary Indian woman. Crafted with care, worn with confidence.</p>
+      </div>
+      <div>
+        <div class="ft-coltitle">Shop</div>
+        <ul class="ft-links">
+          <li><a href="#catalog">All Kurtis</a></li>
+          <li><a href="https://www.amazon.in/stores/Pahrin/page/79437D54-6E9D-4062-A5AB-689ABDF9D15D?lp_asin=B0GMK29MQ1&ref_=ast_bln" target="_blank" rel="noopener">Amazon Store</a></li>
+          <li><a href="https://www.amazon.in/Pahrin-Printed-Multicolor-Geometric-Pattern/dp/B0GDS1M5XQ?ref_=ast_sto_dp" target="_blank" rel="noopener">Bestseller on Amazon</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="ft-coltitle">Help</div>
+        <ul class="ft-links">
+          <li><a href="https://wa.me/917017460082" target="_blank" rel="noopener">WhatsApp Us</a></li>
+          <li><a href="mailto:pahrin.ind@gmail.com">pahrin.ind@gmail.com</a></li>
+          <li><a id="sgOpenFt" href="#">Size Guide</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <p>© 2025 Pahrin · TM Application No. 7156736 · Class 25: Clothing, ready-made clothing &amp; dresses · Proprietor: Rishita Gagrani t/a Rajani Fashion, Surat, Gujarat 395007</p>
+      <p>Made with ♥ for modern Indian women</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ PRODUCT DETAIL MODAL ═══ -->
+<div class="pm-overlay" id="pmOv" role="dialog" aria-modal="true" aria-label="Product details">
+  <div class="pm-modal" id="pmModal">
+    <button class="pm-close" id="pmClose" aria-label="Close product details">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+
+    <!-- Left: image gallery -->
+    <div class="pm-img-panel">
+      <div class="pm-main-img" id="pmMainImg">
+        <img id="pmBigImg" src="" alt=""/>
+      </div>
+      <div class="pm-thumbs" id="pmThumbs"></div>
+    </div>
+
+    <!-- Right: info -->
+    <div class="pm-info" id="pmInfo">
+      <div class="pm-badge-row">
+        <div class="pm-color-dot" id="pmColorDot"></div>
+        <span class="pm-style-tag" id="pmStyleTag"></span>
+        <span class="pm-disc-tag" id="pmDiscTag"></span>
+      </div>
+      <h2 class="pm-title" id="pmTitle"></h2>
+      <div class="pm-price-row">
+        <span class="pm-price" id="pmPrice"></span>
+        <span class="pm-mrp" id="pmMrp"></span>
+        <span class="pm-savings" id="pmSave"></span>
+      </div>
+      <p class="pm-tax">Inclusive of all taxes</p>
+      <div class="pm-specs" id="pmSpecs"></div>
+      <div class="sz-row">
+        <span class="sz-lbl">Select Size</span>
+        <button class="sz-guide-btn" id="szGuideBtn">Size Guide →</button>
+      </div>
+      <div class="sz-opts" id="szOpts"></div>
+      <button class="pm-add" id="pmAdd" disabled>Choose a size first</button>
+      <a href="https://www.amazon.in/Pahrin-Printed-Multicolor-Geometric-Pattern/dp/B0GDS1M5XQ?ref_=ast_sto_dp&th=1&psc=1" target="_blank" rel="noopener" class="pm-amz">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+        Also buy on Amazon with fast delivery
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SIZE GUIDE MODAL ═══ -->
+<div class="sg-overlay" id="sgOv" role="dialog" aria-modal="true" aria-label="Size guide">
+  <div class="sg-modal">
+    <div class="sg-head">
+      <h3>Size Guide</h3>
+      <button class="sg-close" id="sgClose" aria-label="Close size guide">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="sg-table-wrap">
+      <table class="sg-table" aria-label="Size measurements in inches">
+        <thead>
+          <tr>
+            <th>Size</th><th>Chest</th><th>Waist</th><th>Hip</th><th>Shoulder</th><th>Sleeve</th><th>Length</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>S</td><td>36</td><td>32</td><td>38</td><td>13.5</td><td>18+</td><td>30+</td></tr>
+          <tr><td>M</td><td>38</td><td>34</td><td>40</td><td>14</td><td>18+</td><td>30+</td></tr>
+          <tr><td>L</td><td>40</td><td>36</td><td>42</td><td>14.5</td><td>18+</td><td>30+</td></tr>
+          <tr><td>XL</td><td>42</td><td>38</td><td>44</td><td>15</td><td>18+</td><td>30+</td></tr>
+          <tr><td>2XL</td><td>44</td><td>40</td><td>46</td><td>15.5</td><td>18+</td><td>30+</td></tr>
+          <tr><td>3XL</td><td>46</td><td>42</td><td>48</td><td>16</td><td>18+</td><td>30+</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="sg-note">All measurements in inches. The model in our photos is 5'6" and wears size M. We recommend sizing up for a relaxed fit. Sleeve length is 3/4 (approx 18"). Length measured from shoulder seam.</p>
+  </div>
+</div>
+
+<!-- ═══ CART DRAWER ═══ -->
+<div class="cart-ov" id="cartOv" aria-hidden="true"></div>
+<aside class="cart-dr" id="cartDr" role="complementary" aria-label="Shopping cart">
+  <div class="dr-head">
+    <h2>Your Bag</h2>
+    <button class="dr-close" id="cartClose" aria-label="Close cart">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="dr-items" id="drItems"></div>
+  <div class="dr-foot" id="drFoot" style="display:none">
+    <div class="sub-row">
+      <span class="sub-lbl">Subtotal</span>
+      <span class="sub-amt" id="subAmt">₹0</span>
+    </div>
+    <p class="sub-note">No payment now — confirm via WhatsApp · Shipping calculated at checkout</p>
+    <button class="co-btn" id="coOpenBtn">Proceed to Order</button>
+  </div>
+</aside>
+
+<!-- ═══ CHECKOUT MODAL ═══ -->
+<div class="co-ov" id="coOv" role="dialog" aria-modal="true" aria-label="Place your order">
+  <div class="co-modal" id="coModal">
+    <!-- content injected by JS -->
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+<!-- SCROLL TOP -->
+<button class="sc-top" id="scTop" aria-label="Back to top">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+'use strict';
+/* ═══════════════════════════════════════════════
+   PRODUCT DATA — auto-generated from product.csv
+═══════════════════════════════════════════════ */
+const PRODUCTS = [
+  { id:"PROD001", title:"Pahrin Women's Printed Tunic Top, Multicolor Geometric Pattern, Long Sleeve, V-Neck with White Trim Short Kurti for Girls", color:"Multi-Color", material:"Polycotton", style:"Asymmetric", neck:"Notched Neck with Lace", mrp:799, price:349, discount:56, images:["images/PROD001_1.jpg", "images/PROD001_2.jpg", "images/PROD001_3.jpg", "images/PROD001_4.jpg", "images/PROD001_5.jpg", "images/PROD001_6.jpg", "images/PROD001_7.jpg", "images/PROD001_8.jpg"] },
+  { id:"PROD002", title:"Pahrin Women's Blue Printed Tunic Top with White Lace Trim, V-Neck, 3/4 Sleeve, Floral Striped Pattern Short Kurti for Girls", color:"Blue", material:"Polycotton", style:"Asymmetric", neck:"V-Neck with Lace", mrp:799, price:349, discount:56, images:["images/PROD002_1.jpg", "images/PROD002_2.jpg", "images/PROD002_3.jpg"] },
+  { id:"PROD003", title:"Pahrin Women's Off-White Printed Tunic Top with Red Floral Motif, V-Neck, 3/4 Sleeve, Short Kurti for Girls", color:"Ivory", material:"Polycotton", style:"Asymmetric", neck:"Notched Neck with Lace", mrp:799, price:349, discount:56, images:["images/PROD003_1.jpg", "images/PROD003_2.jpg", "images/PROD003_3.jpg"] },
+  { id:"PROD004", title:"Pahrin Women's Yellow Chevron Printed Tunic Top with White Lace Trim, V-Neck, 3/4 Sleeve, Short Kurti for Girls", color:"Yellow", material:"Polycotton", style:"Asymmetric", neck:"Notched Neck", mrp:799, price:349, discount:56, images:["images/PROD004_1.jpg", "images/PROD004_2.jpg", "images/PROD004_3.jpg"] },
+  { id:"PROD005", title:"Pahrin Women's Red and White Floral Printed Tunic Top with Lace Trim, V-Neck, 3/4 Sleeve, Short Kurti for Girls", color:"Red", material:"Polycotton", style:"Asymmetric", neck:"Notched Neck with Lace", mrp:799, price:349, discount:56, images:["images/PROD005_1.jpg", "images/PROD005_2.jpg", "images/PROD005_3.jpg"] },
+  { id:"PROD006", title:"Pahrin Women's Floral Printed Tunic Top with Lace Trim, V-Neck, 3/4 Sleeve, Red and Orange Short Kurti for Girls", color:"Multi-Color", material:"Polycotton", style:"Asymmetric", neck:"Notched Neck with Lace", mrp:799, price:349, discount:56, images:["images/PROD006_1.jpg", "images/PROD006_2.jpg", "images/PROD006_3.jpg"] },
+  { id:"PROD007", title:"Pahrin Women's Multicolor Printed Tunic Top with Lace Trim, V-Neck, 3/4 Sleeve Short Kurti for Girls", color:"Multi-Color", material:"Polycotton", style:"Asymmetric", neck:"Notched Neck with Lace", mrp:799, price:349, discount:56, images:["images/PROD007_1.jpg", "images/PROD007_2.jpg", "images/PROD007_3.jpg"] },
+  { id:"PROD008", title:"Pahrin Women's Teal Blue Floral Printed Tunic Top with White Lace Trim, V-Neck, 3/4 Sleeve Short Kurti for Girls", color:"Teal Blue", material:"Polycotton", style:"Asymmetric", neck:"V-Neck with Lace", mrp:799, price:349, discount:56, images:["images/PROD008_1.jpg", "images/PROD008_2.jpg", "images/PROD008_3.jpg"] },
+  { id:"PROD009", title:"Pahrin Women's Printed Tunic Top Beige with Blue Floral Motif, 3/4 Sleeve, Casual Ethnic Wear Short Kurti for Girls", color:"Beige", material:"Polycotton", style:"Asymmetric", neck:"Notched Neck with Lace", mrp:799, price:349, discount:56, images:["images/PROD009_1.jpg", "images/PROD009_2.jpg", "images/PROD009_3.jpg"] },
+  { id:"PROD010", title:"Pahrin Women\u0092s Floral Printed Kurti Top \u0096 Casual Straight Fit, 3/4 Sleeves, Soft Cotton Blend Tunic for Girls", color:"Sea Blue", material:"Polycotton", style:"Straight", neck:"V-Neck with lace", mrp:799, price:399, discount:50, images:["images/PROD010_1.jpg", "images/PROD010_2.jpg", "images/PROD010_3.jpg"] },
+  { id:"PROD011", title:"Pahrin Women's Pink Polka Dot Print Kurti, Round Neck, 3/4 Sleeves, Casual Ethnic Top", color:"Dusty Pink", material:"Polycotton", style:"Straight", neck:"Roun Neck With Placket", mrp:799, price:399, discount:50, images:["images/PROD011_1.jpg", "images/PROD011_2.jpg", "images/PROD011_3.jpg"] },
+  { id:"PROD012", title:"Pahrin Women's Printed Kurti, Heart and Leaf Print, V-Neck, 3/4 Sleeves, Casual Ethnic Top", color:"Off White", material:"Polycotton", style:"Straight", neck:"V-neck", mrp:799, price:399, discount:50, images:["images/PROD012_1.jpg", "images/PROD012_2.jpg", "images/PROD012_3.jpg"] }
+];
+
+/* ═══════════════════════════════════════════════
+   COLOUR MAP (for the dot in modal)
+═══════════════════════════════════════════════ */
+const COLOR_MAP = {
+  'Multi-Color':'linear-gradient(135deg,#e55,#f90,#4a4)',
+  'Blue':'#4A90C4','Ivory':'#FFFFF0','Yellow':'#F5C518',
+  'Red':'#C0392B','Teal Blue':'#2E9E94','Beige':'#D4B896',
+  'Sea Blue':'#4A7FA5','Dusty Pink':'#D4919A','Off White':'#F5F0E8',
+};
+
+const SIZES = ['S','M','L','XL','2XL','3XL'];
+const WA_NUM = '917017460082';
+const AMZ_URL = 'https://www.amazon.in/Pahrin-Printed-Multicolor-Geometric-Pattern/dp/B0GDS1M5XQ?ref_=ast_sto_dp&th=1&psc=1';
+
+/* ═══════════════════════════════════════════════
+   APP STATE
+═══════════════════════════════════════════════ */
+let cart = [];
+let filterMode = 'all';
+let sortMode = 'default';
+let searchQ = '';
+let curProd = null;
+let curSize = null;
+
+/* ═══════════════════════════════════════════════
+   UTILS
+═══════════════════════════════════════════════ */
+const $ = id => document.getElementById(id);
+const fmt = n => '₹' + n.toLocaleString('en-IN');
+
+function toast(msg) {
+  const t = $('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+/* ═══════════════════════════════════════════════
+   FILTER + SORT
+═══════════════════════════════════════════════ */
+function getList() {
+  let list = [...PRODUCTS];
+  if (filterMode === 'asymmetric') list = list.filter(p => p.style.toLowerCase() === 'asymmetric');
+  else if (filterMode === 'straight') list = list.filter(p => p.style.toLowerCase() === 'straight');
+  else if (filterMode === '349') list = list.filter(p => p.price === 349);
+  else if (filterMode === '399') list = list.filter(p => p.price === 399);
+  if (searchQ) {
+    const q = searchQ.toLowerCase();
+    list = list.filter(p =>
+      p.title.toLowerCase().includes(q) ||
+      p.color.toLowerCase().includes(q) ||
+      p.neck.toLowerCase().includes(q) ||
+      p.style.toLowerCase().includes(q)
+    );
+  }
+  if (sortMode === 'price-asc') list.sort((a,b) => a.price - b.price);
+  else if (sortMode === 'price-desc') list.sort((a,b) => b.price - a.price);
+  else if (sortMode === 'az') list.sort((a,b) => a.title.localeCompare(b.title));
+  return list;
+}
+
+/* ═══════════════════════════════════════════════
+   RENDER PRODUCT GRID
+═══════════════════════════════════════════════ */
+function renderGrid() {
+  const list = getList();
+  $('catCt').textContent = list.length + ' kurti' + (list.length !== 1 ? 's' : '');
+  const grid = $('grid');
+
+  if (!list.length) {
+    grid.innerHTML = `<div class="no-res" role="status">
+      <h3>No kurtis found</h3>
+      <p>Try a different filter or search term.</p>
+    </div>`;
+    return;
+  }
+
+  grid.innerHTML = list.map(p => {
+    const thumb = p.images[0] || '';
+    const thumb2 = p.images[1] || '';
+    return `
+    <article class="card" role="listitem" data-id="${p.id}" tabindex="0" aria-label="${p.title}">
+      <div class="card__img-wrap">
+        <img
+          src="${thumb}"
+          data-alt="${thumb2}"
+          alt="${p.title}"
+          loading="lazy"
+          onerror="this.onerror=null;this.src=''"
+        />
+        <span class="card__disc">-${p.discount}%</span>
+        ${p.images.length > 1 ? `
+        <div class="card__dots" aria-hidden="true">
+          ${p.images.slice(0,4).map((_, i) => `<button class="card__dot ${i===0?'active':''}" data-idx="${i}" tabindex="-1"></button>`).join('')}
+        </div>` : ''}
+        <button class="card__qa" data-id="${p.id}" aria-label="Quick view ${p.title}">Select Size</button>
+      </div>
+      <div class="card__body">
+        <div class="card__color">${p.color}</div>
+        <h3 class="card__title">${p.title}</h3>
+        <div class="card__price-row">
+          <span class="card__price">${fmt(p.price)}</span>
+          <span class="card__mrp">${fmt(p.mrp)}</span>
+          <span class="card__save">-${p.discount}%</span>
+        </div>
+      </div>
+    </article>`;
+  }).join('');
+
+  /* Card hover image swap & dot nav */
+  grid.querySelectorAll('.card').forEach(card => {
+    const img = card.querySelector('img');
+    const dots = card.querySelectorAll('.card__dot');
+    const prod = PRODUCTS.find(p => p.id === card.dataset.id);
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', e => {
+        e.stopPropagation();
+        const idx = parseInt(dot.dataset.idx);
+        img.style.opacity = '0';
+        setTimeout(() => {
+          img.src = prod.images[idx] || prod.images[0];
+          img.style.opacity = '1';
+        }, 110);
+        dots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+      });
+    });
+
+    /* Hover: show 2nd image */
+    if (prod.images.length > 1) {
+      let swapped = false;
+      card.addEventListener('mouseenter', () => {
+        if (!swapped) {
+          img.style.opacity = '0';
+          setTimeout(() => {
+            img.src = prod.images[1];
+            img.style.opacity = '1';
+          }, 120);
+          swapped = true;
+          dots[1]?.classList.add('active');
+          dots[0]?.classList.remove('active');
+        }
+      });
+      card.addEventListener('mouseleave', () => {
+        img.style.opacity = '0';
+        setTimeout(() => {
+          img.src = prod.images[0];
+          img.style.opacity = '1';
+        }, 120);
+        swapped = false;
+        dots[0]?.classList.add('active');
+        dots[1]?.classList.remove('active');
+      });
+    }
+
+    /* Open modal */
+    card.addEventListener('click', e => {
+      const qa = e.target.closest('.card__qa');
+      openModal(card.dataset.id);
+    });
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card.dataset.id); }
+    });
+  });
+}
+
+/* ═══════════════════════════════════════════════
+   PRODUCT MODAL
+═══════════════════════════════════════════════ */
+function openModal(id) {
+  const p = PRODUCTS.find(x => x.id === id);
+  if (!p) return;
+  curProd = p; curSize = null;
+
+  /* Big image */
+  $('pmBigImg').src = p.images[0];
+  $('pmBigImg').alt = p.title;
+
+  /* Thumbnails */
+  const thumbs = $('pmThumbs');
+  thumbs.innerHTML = p.images.map((src, i) =>
+    `<button class="pm-thumb ${i===0?'active':''}" data-idx="${i}" aria-label="View image ${i+1}">
+       <img src="${src}" alt="${p.title} view ${i+1}" loading="lazy"/>
+     </button>`
+  ).join('');
+  thumbs.querySelectorAll('.pm-thumb').forEach(tb => {
+    tb.addEventListener('click', () => {
+      const idx = parseInt(tb.dataset.idx);
+      $('pmBigImg').style.opacity = '0';
+      setTimeout(() => { $('pmBigImg').src = p.images[idx]; $('pmBigImg').style.opacity = '1'; }, 120);
+      thumbs.querySelectorAll('.pm-thumb').forEach(t => t.classList.remove('active'));
+      tb.classList.add('active');
+    });
+  });
+
+  /* Badges */
+  const dot = $('pmColorDot');
+  const colVal = COLOR_MAP[p.color] || '#999';
+  if (colVal.startsWith('linear')) { dot.style.background = colVal; }
+  else { dot.style.background = colVal; }
+  $('pmStyleTag').textContent = p.style + ' Fit';
+  $('pmDiscTag').textContent = '-' + p.discount + '% OFF';
+
+  /* Title & price */
+  $('pmTitle').textContent = p.title;
+  $('pmPrice').textContent = fmt(p.price);
+  $('pmMrp').textContent = fmt(p.mrp);
+  $('pmSave').textContent = 'Save ' + fmt(p.mrp - p.price);
+
+  /* Specs */
+  $('pmSpecs').innerHTML = `
+    <div class="pm-spec"><span>Material</span><strong>${p.material}</strong></div>
+    <div class="pm-spec"><span>Neckline</span><strong>${p.neck}</strong></div>
+    <div class="pm-spec"><span>Sleeve</span><strong>3/4 Sleeves</strong></div>
+    <div class="pm-spec"><span>Length</span><strong>Short / Tunic (30″+)</strong></div>
+    <div class="pm-spec"><span>Style</span><strong>${p.style}</strong></div>
+    <div class="pm-spec"><span>Colour</span><strong>${p.color}</strong></div>
+  `;
+
+  /* Sizes */
+  const szOpts = $('szOpts');
+  szOpts.innerHTML = SIZES.map(s =>
+    `<button class="sz-btn" data-sz="${s}" aria-label="Size ${s}" aria-pressed="false">${s}</button>`
+  ).join('');
+  szOpts.querySelectorAll('.sz-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      szOpts.querySelectorAll('.sz-btn').forEach(b => { b.classList.remove('sel'); b.setAttribute('aria-pressed','false'); });
+      btn.classList.add('sel'); btn.setAttribute('aria-pressed','true');
+      curSize = btn.dataset.sz;
+      const addBtn = $('pmAdd');
+      addBtn.disabled = false;
+      addBtn.textContent = `Add to Bag — ${fmt(p.price)}`;
+    });
+  });
+
+  const addBtn = $('pmAdd');
+  addBtn.disabled = true;
+  addBtn.textContent = 'Choose a size first';
+  // Re-bind click (fresh each open)
+  addBtn.onclick = () => {
+    if (!curSize) return;
+    cartAdd(curProd, curSize);
+    closeModal();
+    openCart();
+  };
+
+  $('pmOv').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  $('pmClose').focus();
+}
+
+function closeModal() {
+  $('pmOv').classList.remove('open');
+  document.body.style.overflow = '';
+  curProd = null; curSize = null;
+}
+
+/* ═══════════════════════════════════════════════
+   CART
+═══════════════════════════════════════════════ */
+function cartAdd(p, sz) {
+  const key = p.id + '-' + sz;
+  const ex = cart.find(i => i.key === key);
+  if (ex) ex.qty++;
+  else cart.push({ key, p, sz, qty: 1 });
+  updateCartUI();
+  toast(p.color + ' kurti (Size ' + sz + ') added to bag ✓');
+}
+
+function updateCartUI() {
+  const tot = cart.reduce((s,i) => s + i.qty, 0);
+  const sub = cart.reduce((s,i) => s + i.qty * i.p.price, 0);
+  const n = $('cartN');
+  n.textContent = tot;
+  tot > 0 ? n.classList.add('show') : n.classList.remove('show');
+  $('subAmt').textContent = fmt(sub);
+  $('drFoot').style.display = cart.length ? 'block' : 'none';
+  renderCartItems();
+}
+
+function renderCartItems() {
+  const el = $('drItems');
+  if (!cart.length) {
+    el.innerHTML = `<div class="cart-empty" role="status">
+      <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 0 1-8 0"/>
+      </svg>
+      <p>Your bag is empty.<br/>Browse the collection above.</p>
+    </div>`;
+    return;
+  }
+  el.innerHTML = cart.map((item, idx) => `
+    <div class="c-item">
+      <div class="c-img">
+        <img src="${item.p.images[0]}" alt="${item.p.title}" loading="lazy" onerror="this.src=''"/>
+      </div>
+      <div class="c-info">
+        <div class="c-title">${item.p.title.split(',')[0]}</div>
+        <div class="c-meta">Size: ${item.sz} &nbsp;·&nbsp; ${item.p.color}</div>
+        <div class="c-ctrls">
+          <button class="q-btn" data-i="${idx}" data-d="-1" aria-label="Decrease quantity">−</button>
+          <span class="q-num" aria-live="polite">${item.qty}</span>
+          <button class="q-btn" data-i="${idx}" data-d="1" aria-label="Increase quantity">+</button>
+          <button class="c-rm" data-i="${idx}" aria-label="Remove item">Remove</button>
+        </div>
+      </div>
+      <div class="c-price">${fmt(item.qty * item.p.price)}</div>
+    </div>`).join('');
+
+  el.querySelectorAll('.q-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const i = parseInt(btn.dataset.i);
+      cart[i].qty += parseInt(btn.dataset.d);
+      if (cart[i].qty <= 0) cart.splice(i, 1);
+      updateCartUI();
+    });
+  });
+  el.querySelectorAll('.c-rm').forEach(btn => {
+    btn.addEventListener('click', () => {
+      cart.splice(parseInt(btn.dataset.i), 1);
+      updateCartUI();
+    });
+  });
+}
+
+function openCart() {
+  $('cartOv').classList.add('open');
+  $('cartDr').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  renderCartItems();
+}
+
+function closeCart() {
+  $('cartOv').classList.remove('open');
+  $('cartDr').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ═══════════════════════════════════════════════
+   CHECKOUT
+═══════════════════════════════════════════════ */
+function openCheckout() {
+  const sub = cart.reduce((s,i) => s + i.qty * i.p.price, 0);
+  const itemRows = cart.map(i =>
+    `<div class="o-row">
+       <span>${i.p.title.split(',')[0].slice(0,42)}… ×${i.qty} (${i.sz})</span>
+       <span>${fmt(i.qty * i.p.price)}</span>
+     </div>`
+  ).join('');
+
+  $('coModal').innerHTML = `
+    <div class="co-head">
+      <h2>Almost there</h2>
+      <p>3 quick details — no payment needed now.</p>
+    </div>
+    <div class="co-body">
+      <div class="o-sum">
+        <h4>Order Summary</h4>
+        ${itemRows}
+        <div class="o-row"><span>Shipping</span><span style="color:var(--sage-d);font-weight:600">FREE</span></div>
+        <div class="o-total"><span>Total</span><span>${fmt(sub)}</span></div>
+      </div>
+      <div class="fg">
+        <label for="fName">Full Name</label>
+        <input type="text" id="fName" placeholder="Priya Sharma" autocomplete="name"/>
+        <span class="err-msg" id="eN">Please enter your full name.</span>
+      </div>
+      <div class="fg">
+        <label for="fPhone">WhatsApp / Mobile Number</label>
+        <input type="tel" id="fPhone" placeholder="+91 98765 43210" autocomplete="tel" inputmode="numeric"/>
+        <span class="err-msg" id="eP">Enter a valid 10-digit mobile number.</span>
+      </div>
+      <div class="fg">
+        <label for="fAddr">Full Delivery Address (with Pincode)</label>
+        <textarea id="fAddr" rows="3" placeholder="House No., Street, City, State — Pincode" autocomplete="street-address"></textarea>
+        <span class="err-msg" id="eA">Please enter your address with 6-digit pincode.</span>
+      </div>
+      <button class="place-btn" id="placeBtn">Confirm Order →</button>
+      <button class="co-cancel" id="coCancel">← Back to cart</button>
+    </div>`;
+
+  $('placeBtn').addEventListener('click', placeOrder);
+  $('coCancel').addEventListener('click', () => { $('coOv').classList.remove('open'); openCart(); });
+
+  $('coOv').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => $('fName').focus(), 80);
+}
+
+function validate() {
+  let ok = true;
+  const name = $('fName').value.trim();
+  const phone = $('fPhone').value.replace(/\D/g,'');
+  const addr = $('fAddr').value.trim();
+  const setE = (fid, eid, bad) => {
+    $(fid).classList.toggle('err', bad);
+    $(eid).classList.toggle('show', bad);
+    if (bad) ok = false;
+  };
+  setE('fName','eN', name.length < 2);
+  setE('fPhone','eP', phone.length < 10 || phone.length > 12);
+  setE('fAddr','eA', addr.length < 10 || !/\d{6}/.test(addr));
+  return ok;
+}
+
+function placeOrder() {
+  if (!validate()) return;
+  const name = $('fName').value.trim();
+  const phone = $('fPhone').value.trim();
+  const addr = $('fAddr').value.trim();
+  const sub = cart.reduce((s,i) => s + i.qty * i.p.price, 0);
+  const lines = cart.map(i =>
+    `  • ${i.p.title.split(',')[0]} | Size: ${i.sz} | Qty: ${i.qty} | ${fmt(i.qty * i.p.price)}`
+  ).join('\n');
+
+  const msg = encodeURIComponent(
+    `🛍️ *New Order — Pahrin*\n\n` +
+    `👤 *Customer:* ${name}\n` +
+    `📱 *Mobile:* ${phone}\n` +
+    `📦 *Delivery Address:*\n${addr}\n\n` +
+    `*Items Ordered:*\n${lines}\n\n` +
+    `💰 *Total:* ${fmt(sub)}\n\n` +
+    `_Payment via UPI after order confirmation._`
+  );
+  const waURL = `https://wa.me/${WA_NUM}?text=${msg}`;
+
+  $('coModal').innerHTML = `
+    <div class="suc">
+      <div class="suc-icon">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#5A7A66" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <h2>Order Placed! 🎉</h2>
+      <p>Thank you, <strong>${name}</strong>! Our team will reach out on <strong>${phone}</strong> to confirm and arrange delivery.</p>
+      <div class="pay-box">
+        <div class="pay-box-ico">💬</div>
+        <p><strong>No payment required right now.</strong> We will contact you on WhatsApp to share UPI payment details and confirm your order within 24 hours.</p>
+      </div>
+      <div class="suc-acts">
+        <a href="${waURL}" target="_blank" rel="noopener" class="wa-btn">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          Send Order on WhatsApp
+        </a>
+        <button class="cont-btn" id="contBtn">Continue Shopping</button>
+      </div>
+    </div>`;
+
+  $('contBtn').addEventListener('click', () => {
+    cart = [];
+    updateCartUI();
+    $('coOv').classList.remove('open');
+    document.body.style.overflow = '';
+    toast('Order confirmed! We\'ll WhatsApp you shortly 🎉');
+  });
+}
+
+/* ═══════════════════════════════════════════════
+   EVENT BINDINGS
+═══════════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* Render initial grid */
+  renderGrid();
+  updateCartUI();
+
+  /* Search */
+  let searchTimer;
+  $('searchInput').addEventListener('input', e => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => { searchQ = e.target.value.trim(); renderGrid(); }, 220);
+  });
+
+  /* Filter pills */
+  document.querySelectorAll('.pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterMode = btn.dataset.f;
+      renderGrid();
+    });
+  });
+
+  /* Sort */
+  $('sortSel').addEventListener('change', e => { sortMode = e.target.value; renderGrid(); });
+
+  /* Cart open/close */
+  $('cartBtn').addEventListener('click', openCart);
+  $('cartClose').addEventListener('click', closeCart);
+  $('cartOv').addEventListener('click', closeCart);
+
+  /* Checkout */
+  $('coOpenBtn').addEventListener('click', () => { closeCart(); openCheckout(); });
+
+  /* Product modal close */
+  $('pmClose').addEventListener('click', closeModal);
+  $('pmOv').addEventListener('click', e => { if (e.target === $('pmOv')) closeModal(); });
+
+  /* Size guide */
+  $('szGuideBtn').addEventListener('click', () => $('sgOv').classList.add('open'));
+  $('sgClose').addEventListener('click', () => $('sgOv').classList.remove('open'));
+  $('sgOv').addEventListener('click', e => { if (e.target === $('sgOv')) $('sgOv').classList.remove('open'); });
+  $('sgOpenFt').addEventListener('click', e => { e.preventDefault(); $('sgOv').classList.add('open'); });
+
+  /* Scroll top */
+  const scBtn = $('scTop');
+  window.addEventListener('scroll', () => scBtn.classList.toggle('vis', window.scrollY > 440), { passive: true });
+  scBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  /* Global keyboard */
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeModal();
+      closeCart();
+      $('coOv').classList.remove('open');
+      $('sgOv').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+});
+</script>
+</body>
+</html>
