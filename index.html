@@ -102,7 +102,7 @@
     .sale-price { font-weight: 600; color: var(--charcoal); }
     .mrp-price { font-size: 0.85rem; text-decoration: line-through; color: var(--muted); }
 
-    /* Modal / Drawer Base styles */
+    /* Drawer Base styles */
     .drawer-overlay {
       position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 1000;
       opacity: 0; pointer-events: none; transition: opacity 0.3s;
@@ -115,7 +115,7 @@
     }
     .drawer-overlay.open .drawer-content { transform: translateX(0); }
 
-    /* Product Modal Window */
+    /* Product Modal Window / Checkout General Overlays */
     .modal-overlay {
       position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1001;
       display: none; align-items: center; justify-content: center; padding: 1rem;
@@ -124,6 +124,10 @@
     .modal-box {
       background: #fff; max-width: 800px; width: 100%; max-height: 90vh;
       overflow-y: auto; border-radius: 8px; display: grid; grid-template-columns: 1fr 1fr;
+    }
+    .checkout-box {
+      background: #fff; max-width: 500px; width: 100%; padding: 2.5rem;
+      border-radius: 8px; position: relative; display: flex; flex-direction: column; gap: 1.2rem;
     }
     @media (max-width: 768px) {
       .modal-box { grid-template-columns: 1fr; }
@@ -136,6 +140,12 @@
     .modal-details { padding: 2rem; display: flex; flex-direction: column; gap: 1rem; position: relative; }
     .close-btn { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
     
+    /* Inputs Form Rules */
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group label { font-size: 0.85rem; font-weight: 500; color: var(--charcoal-2); }
+    .form-input { padding: 0.75rem; border: 1px solid var(--sand); border-radius: 4px; font-family: inherit; font-size: 0.95rem; }
+    .form-input:focus { outline: none; border-color: var(--charcoal); }
+
     .btn-primary {
       background: var(--charcoal); color: #fff; border: none; padding: 0.8rem;
       border-radius: 4px; font-weight: 500; cursor: pointer; text-align: center; width: 100%;
@@ -150,7 +160,6 @@
     .cart-item { display: flex; gap: 1rem; align-items: center; border-bottom: 1px solid var(--ivory-deep); padding-bottom: 1rem; }
     .cart-item-img { width: 60px; height: 80px; object-fit: cover; }
     .cart-item-details { flex-grow: 1; }
-    .cart-total-section { border-top: 1px solid var(--sand); padding-top: 1rem; margin-top: 1rem; }
 
     #scrollTopBtn {
       position: fixed; bottom: 2rem; right: 2rem; background: #fff; border: 1px solid var(--sand);
@@ -198,12 +207,12 @@
       <button class="close-btn" id="cartCloseBtn">&times;</button>
     </div>
     <div class="cart-items" id="cartItemsContainer"></div>
-    <div class="cart-total-section">
+    <div class="drawer-content-footer" style="border-top:1px solid var(--sand); padding-top:1rem; margin-top:1rem;">
       <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-weight: 600;">
         <span>Total:</span>
         <span id="cartTotalValue">₹0</span>
       </div>
-      <button class="btn-primary" onclick="alert('Checkout integration arriving soon!')">Proceed to Checkout</button>
+      <button class="btn-primary" id="checkoutTriggerBtn">Proceed to Checkout</button>
     </div>
   </div>
 </div>
@@ -211,6 +220,32 @@
 <div class="modal-overlay" id="productModal">
   <div class="modal-box" id="modalBox">
     </div>
+</div>
+
+<div class="modal-overlay" id="checkoutModal">
+  <div class="checkout-box">
+    <button class="close-btn" id="checkoutCloseBtn">&times;</button>
+    <h2 style="font-family:'Playfair Display', serif; font-size:1.6rem; border-bottom:1px solid var(--ivory-deep); padding-bottom:0.5rem;">Delivery Details</h2>
+    
+    <form id="checkoutForm" onsubmit="handleOrderSubmit(event)">
+      <div class="form-group" style="margin-bottom:1rem;">
+        <label for="custName">Full Name</label>
+        <input type="text" id="custName" class="form-input" placeholder="Your name" required />
+      </div>
+      
+      <div class="form-group" style="margin-bottom:1rem;">
+        <label for="custMobile">Mobile Number</label>
+        <input type="tel" id="custMobile" class="form-input" placeholder="10-digit number" pattern="[0-9]{10}" title="Please enter a valid 10 digit mobile number" required />
+      </div>
+      
+      <div class="form-group" style="margin-bottom:1.5rem;">
+        <label for="custAddress">Shipping Address</label>
+        <textarea id="custAddress" class="form-input" rows="3" placeholder="Complete address with pincode" style="resize:none;" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary">Place Order via Email</button>
+    </form>
+  </div>
 </div>
 
 <button id="scrollTopBtn">↑</button>
@@ -237,17 +272,14 @@ document.addEventListener("DOMContentLoaded", () => {
       products = results.data.map(row => {
         const id = row["Product ID"] ? row["Product ID"].trim() : "";
         
-        // Loop through columns 'Image 1' to 'Image 8' to extract asset filenames 
         const parsedImages = [];
         for (let i = 1; i <= 8; i++) {
           const imgFile = row[`Image ${i}`];
           if (imgFile && imgFile.trim() !== "") {
-            // Append the 'images/' folder path cleanly
             parsedImages.push("images/" + imgFile.trim());
           }
         }
 
-        // Setup a reliable fallback structure if row has no defined images
         const finalImages = parsedImages.length > 0 ? parsedImages : ["images/PROD001_1.jpg"];
 
         return {
@@ -394,7 +426,6 @@ function addToCart(product) {
   document.getElementById("cartDrawer").classList.add("open");
 }
 
-// Ensure the main image is visible even inside small cart components
 function updateCartUI() {
   const container = document.getElementById("cartItemsContainer");
   const countSpan = document.getElementById("cartCount");
@@ -431,10 +462,64 @@ function removeFromCart(id) {
 }
 
 // ──────────────────────────────────────────
+// ORDER SUBMISSION HANDLER
+// ──────────────────────────────────────────
+function handleOrderSubmit(e) {
+  e.preventDefault();
+  
+  const name = document.getElementById("custName").value.trim();
+  const mobile = document.getElementById("custMobile").value.trim();
+  const address = document.getElementById("custAddress").value.trim();
+
+  let itemDetails = "";
+  let orderTotal = 0;
+  cart.forEach(item => {
+    itemDetails += `- ${item.title} (${item.id}) [Qty: ${item.quantity}] - ₹${item.price * item.quantity}\n`;
+    orderTotal += (item.price * item.quantity);
+  });
+
+  const subject = encodeURIComponent(`New Order Placement from ${name}`);
+  const body = encodeURIComponent(
+    `Hello Pahrin Team,\n\n` +
+    `I would like to place an order for the following items:\n\n` +
+    `${itemDetails}\n` +
+    `Total Amount: ₹${orderTotal}\n\n` +
+    `Customer Details:\n` +
+    `Name: ${name}\n` +
+    `Mobile: ${mobile}\n` +
+    `Shipping Address: ${address}\n\n` +
+    `Thank you!`
+  );
+
+  // Launches user's email application instantly prepopulated with their cart details
+  window.location.href = `mailto:pahrin.ind@gmail.com?subject=${subject}&body=${body}`;
+
+  // Clear states securely
+  cart = [];
+  updateCartUI();
+  document.getElementById("checkoutForm").reset();
+  document.getElementById("checkoutModal").classList.remove("open");
+  alert("Order drafted successfully! Please click send inside your email client application.");
+}
+
+// ──────────────────────────────────────────
 // INTERACTION LISTENERS
 // ──────────────────────────────────────────
 document.getElementById("cartOpenBtn").addEventListener("click", () => document.getElementById("cartDrawer").classList.add("open"));
 document.getElementById("cartCloseBtn").addEventListener("click", () => document.getElementById("cartDrawer").classList.remove("open"));
+
+// Checkout Modal Triggers
+document.getElementById("checkoutTriggerBtn").addEventListener("click", () => {
+  if (cart.length === 0) {
+    alert("Your cart is currently empty!");
+    return;
+  }
+  document.getElementById("cartDrawer").classList.remove("open");
+  document.getElementById("checkoutModal").classList.add("open");
+});
+document.getElementById("checkoutCloseBtn").addEventListener("click", () => {
+  document.getElementById("checkoutModal").classList.remove("open");
+});
 
 document.querySelectorAll(".filter-pill").forEach(btn => {
   btn.addEventListener("click", () => {
@@ -469,6 +554,7 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closeProductModal();
     document.getElementById("cartDrawer").classList.remove("open");
+    document.getElementById("checkoutModal").classList.remove("open");
   }
 });
 </script>
