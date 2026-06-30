@@ -229,22 +229,29 @@ let searchQuery = '';
 // INITIALIZE & FETCH CSV
 // ──────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
-  // Fetch from the root level location where index.html sits
   Papa.parse("product.csv", {
     download: true,
     header: true,
     skipEmptyLines: true,
     complete: function(results) {
-      // Map data accurately to match variable needs
       products = results.data.map(row => {
-        // Build image asset arrays cleanly filtering empty string items
-        const images = [];
+        const id = row["Product ID"] ? row["Product ID"].trim() : "";
+        
+        // Loop through columns 'Image 1' to 'Image 8' to extract asset filenames 
+        const parsedImages = [];
         for (let i = 1; i <= 8; i++) {
-          if (row[`Image ${i}`]) images.push(row[`Image ${i}`].trim());
+          const imgFile = row[`Image ${i}`];
+          if (imgFile && imgFile.trim() !== "") {
+            // Append the 'images/' folder path cleanly
+            parsedImages.push("images/" + imgFile.trim());
+          }
         }
 
+        // Setup a reliable fallback structure if row has no defined images
+        const finalImages = parsedImages.length > 0 ? parsedImages : ["images/PROD001_1.jpg"];
+
         return {
-          id: row["Product ID"] ? row["Product ID"].trim() : "",
+          id: id,
           title: row["Title"] ? row["Title"].trim() : "",
           color: row["Color"] ? row["Color"].trim() : "",
           material: row["Material"] ? row["Material"].trim() : "",
@@ -252,9 +259,9 @@ document.addEventListener("DOMContentLoaded", () => {
           neckStyle: row["Neck Style"] ? row["Neck Style"].trim() : "",
           mrp: parseFloat(row["MRP"]) || 0,
           price: parseFloat(row["Sale Price"]) || 0,
-          images: images.length > 0 ? images : ["https://m.media-amazon.com/images/I/81O6hX831NL.jpg"] // Fallback image setup
+          images: finalImages
         };
-      }).filter(p => p.id); // Eliminate trailing blank parsed lines safely
+      }).filter(p => p.id);
 
       document.getElementById("loadingMessage").style.display = "none";
       document.getElementById("productsGrid").style.display = "grid";
@@ -276,17 +283,14 @@ function renderProducts() {
 
   let filtered = [...products];
 
-  // Apply Filter Category Rule
   if (activeCategory !== "all") {
     filtered = filtered.filter(p => p.style.toLowerCase() === activeCategory.toLowerCase());
   }
 
-  // Apply Search Processing
   if (searchQuery) {
     filtered = filtered.filter(p => p.title.toLowerCase().includes(searchQuery.toLowerCase()) || p.color.toLowerCase().includes(searchQuery.toLowerCase()));
   }
 
-  // Apply Sorting Logic rules
   if (sortMode === "low-high") {
     filtered.sort((a, b) => a.price - b.price);
   } else if (sortMode === "high-low") {
@@ -329,7 +333,6 @@ function openProductModal(product) {
   const modalBox = document.getElementById("modalBox");
   const overlay = document.getElementById("productModal");
 
-  // Build the responsive inner grid details context dynamically
   modalBox.innerHTML = `
     <div class="modal-gallery">
       <img id="mainModalImg" class="modal-main-img" src="${product.images[0]}" alt="${product.title}">
@@ -391,6 +394,7 @@ function addToCart(product) {
   document.getElementById("cartDrawer").classList.add("open");
 }
 
+// Ensure the main image is visible even inside small cart components
 function updateCartUI() {
   const container = document.getElementById("cartItemsContainer");
   const countSpan = document.getElementById("cartCount");
@@ -455,14 +459,12 @@ document.getElementById("searchInput").addEventListener("input", (e) => {
   }, 200);
 });
 
-// Scroll to top engine
 const scrollBtn = document.getElementById("scrollTopBtn");
 window.addEventListener("scroll", () => {
   scrollBtn.classList.toggle("visible", window.scrollY > 400);
 }, { passive: true });
 scrollBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
-// General UX Close binder
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closeProductModal();
