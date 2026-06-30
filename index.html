@@ -151,6 +151,8 @@
       border-radius: 4px; font-weight: 500; cursor: pointer; text-align: center; width: 100%;
     }
     .btn-primary:hover { background: var(--charcoal-2); }
+    .btn-whatsapp { background-color: #25D366; color: #fff; }
+    .btn-whatsapp:hover { background-color: #20BA5A; }
 
     #loadingMessage { text-align: center; padding: 3rem; font-size: 1.2rem; color: var(--muted); }
     
@@ -243,7 +245,7 @@
         <textarea id="custAddress" class="form-input" rows="3" placeholder="Complete address with pincode" style="resize:none;" required></textarea>
       </div>
 
-      <button type="submit" class="btn-primary">Place Order via Email</button>
+      <button type="submit" class="btn-primary btn-whatsapp">Place Order via WhatsApp</button>
     </form>
   </div>
 </div>
@@ -462,7 +464,7 @@ function removeFromCart(id) {
 }
 
 // ──────────────────────────────────────────
-// ORDER SUBMISSION HANDLER
+// WHATSAPP ORDER GENERATION
 // ──────────────────────────────────────────
 function handleOrderSubmit(e) {
   e.preventDefault();
@@ -473,33 +475,37 @@ function handleOrderSubmit(e) {
 
   let itemDetails = "";
   let orderTotal = 0;
+  
   cart.forEach(item => {
-    itemDetails += `- ${item.title} (${item.id}) [Qty: ${item.quantity}] - ₹${item.price * item.quantity}\n`;
+    itemDetails += `• ${item.title} (${item.id}) \n  *Qty:* ${item.quantity} × ₹${item.price} = ₹${item.price * item.quantity}\n\n`;
     orderTotal += (item.price * item.quantity);
   });
 
-  const subject = encodeURIComponent(`New Order Placement from ${name}`);
-  const body = encodeURIComponent(
-    `Hello Pahrin Team,\n\n` +
-    `I would like to place an order for the following items:\n\n` +
-    `${itemDetails}\n` +
-    `Total Amount: ₹${orderTotal}\n\n` +
-    `Customer Details:\n` +
-    `Name: ${name}\n` +
-    `Mobile: ${mobile}\n` +
-    `Shipping Address: ${address}\n\n` +
-    `Thank you!`
-  );
+  // Clean formatted text string using standard WhatsApp text decoration markdown codes (* for bold)
+  const textMessage = 
+    `*NEW ORDER PLACEMENT - PAHRIN*\n` +
+    `-----------------------------------\n\n` +
+    `*Customer Information:*\n` +
+    `• *Name:* ${name}\n` +
+    `• *Mobile Contact:* ${mobile}\n` +
+    `• *Shipping Address:* ${address}\n\n` +
+    `*Order Items:*\n` +
+    `${itemDetails}` +
+    `-----------------------------------\n` +
+    `*Total Order Amount:* ₹${orderTotal}\n\n` +
+    `Please confirm my order and share estimated arrival timeline. Thank you!`;
 
-  // Launches user's email application instantly prepopulated with their cart details
-  window.location.href = `mailto:pahrin.ind@gmail.com?subject=${subject}&body=${body}`;
+  const encryptedMessage = encodeURIComponent(textMessage);
+  
+  // Launches official web client or local system app instantly addressed directly to you
+  const businessPhone = "918087668114"; // Country code + mobile number layout
+  window.open(`https://api.whatsapp.com/send?phone=${businessPhone}&text=${encryptedMessage}`, '_blank');
 
-  // Clear states securely
+  // Safely wipe form input details and cart data values
   cart = [];
   updateCartUI();
   document.getElementById("checkoutForm").reset();
   document.getElementById("checkoutModal").classList.remove("open");
-  alert("Order drafted successfully! Please click send inside your email client application.");
 }
 
 // ──────────────────────────────────────────
